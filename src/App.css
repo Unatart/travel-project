@@ -1,0 +1,14 @@
+:root {
+    --back-color: #000015;
+}
+
+*, body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: 0;
+    background-color: var(--back-color);
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
