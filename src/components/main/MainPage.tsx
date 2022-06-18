@@ -6,7 +6,7 @@ import {Title} from "../../ui-kit/title/Title";
 export const MainPage:React.FC = () => {
     return (
         <div className={"main"}>
-            <Title text={"Start your journey here.."} secondary_text={"Compile trip of your dream with valuable price"}/>
+            <Title text={"Start your journey here.."} secondary_text={"Compile trip of your dream with valuable price"} className={"grid-title"}/>
             {/*<Map/>*/}
             {/*<Buttons/>*/}
             {/*<Contacts/>*/}

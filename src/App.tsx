@@ -6,7 +6,7 @@ import {
     BrowserRouter as Router,
     Route, Routes
 } from "react-router-dom";
-import {VoyagePage} from "./components/voyage/VoyagePage";
+import {TourPage} from "./components/tour/TourPage";
 import {NavBar} from "./ui-kit/navbar/NavBar";
 
 function App() {
@@ -17,12 +17,12 @@ function App() {
                 <NavBar items={["main", "tours", "reviews", "contacts", "authorize"]}/>
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
-                    <Route path="/tours" element={<VoyagePage/>}/>
+                    <Route path="/tours" element={<TourPage/>}/>
                     <Route path="/result"/>
                     <Route path="/auth"/>
                 </Routes>
                 {/*<AuthorizePage/>*/}
-                {/*<VoyagePage/>*/}
+                {/*<TourPage/>*/}
                 {/*<ResultPage/>*/}
             </Router>
         </div>
