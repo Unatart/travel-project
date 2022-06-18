@@ -1,0 +1,75 @@
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-wrapper > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide-up 0.4s ease;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25pt;
+    border: 2pt solid rgb(255, 255, 255);
+    filter: brightness(0.8);
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: scale(1);
+}
+
+.grid-wrapper > div > img:hover {
+    margin: 3pt;
+    border-radius: 25pt;
+    transform: scale(1.1);
+    filter: brightness(1);
+    z-index: 2;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.grid-wrapper {
+    position: absolute;
+    top: 30vh;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270pt, 1fr));
+    grid-auto-rows: 90pt;
+    grid-auto-flow: row dense;
+    justify-items: center;
+    grid-gap: 18pt;
+    height: 210vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 3;
+}
