@@ -18,12 +18,9 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/tours" element={<TourPage/>}/>
-                    <Route path="/result"/>
-                    <Route path="/auth"/>
+                    <Route path="/reviews"/>
+                    <Route path="/authorize"/>
                 </Routes>
-                {/*<AuthorizePage/>*/}
-                {/*<TourPage/>*/}
-                {/*<ResultPage/>*/}
             </Router>
         </div>
     );

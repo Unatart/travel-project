@@ -1,0 +1,34 @@
+.roadmap {
+    grid-area: map;
+    padding-top: 10vh;
+}
+
+.roadmap-item {
+    display: inline-block;
+    position:relative;
+    width: 210pt;
+    height: 50pt;
+    background: linear-gradient(to bottom, #ff35bf 0%, #ff3550 50%), #ff3550;
+    border: 1pt solid transparent;
+    box-shadow: 0 0 10pt rgba(213, 33, 57, 0.85);
+    border-radius: 25pt;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding: 10pt;
+    font-weight: bold;
+    margin-left: 8vw;
+}
+
+.map-arrow {
+    display: inline-block;
+    color: whitesmoke;
+    position: relative;
+    top: 15pt;
+    left: 50pt;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.rotate {
+    transform: rotate(90deg) scale(1, -1);
+}
