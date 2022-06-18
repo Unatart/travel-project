@@ -3,15 +3,16 @@ import './App.css';
 import {Background} from "./ui-kit/background/Background";
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import {MainPage} from "./components/main/MainPage";
 
 const history = createBrowserHistory({ window });
 
 function App() {
   return (
-      <div className="App">
+      <div className="app">
           <Background/>
           <HistoryRouter history={history}>
-              {/*<MainPage/>*/}
+              <MainPage/>
               {/*<AuthorizePage/>*/}
               {/*<VoyagePage/>*/}
               {/*<ResultPage/>*/}
