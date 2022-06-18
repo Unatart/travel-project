@@ -1,0 +1,35 @@
+.pointer {
+    position: fixed;
+    width: 50pt;
+    height: 50pt;
+    background: linear-gradient(to bottom, #ff35bf 0%, #ff3550 50%), #ff3550;
+    border: 1pt solid transparent;
+    box-shadow: 0 0 10pt rgba(213, 33, 57, 0.85);
+    border-radius: 25pt;
+    bottom: 15vh;
+    right: 5vh;
+}
+
+.pointer-text {
+    color: whitesmoke;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.bottom-text {
+    color: whitesmoke;
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}

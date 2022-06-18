@@ -1,0 +1,26 @@
+.contacts {
+    grid-area: contacts;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.contact-text {
+    font-size: 2rem;
+}
+
+.contact {
+    font-weight: bold;
+    position: relative;
+    display: inline;
+    width: 50pt;
+    border-radius: 10pt;
+    border: 1px solid rgba(245, 245, 245, 0.85);
+    padding: 8pt 24pt;
+    top: 10%;
+    margin: 5%;
+}
+
+.contact:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+}

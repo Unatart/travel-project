@@ -12,7 +12,7 @@ export function BarElement(props:IBarElementProps) {
         <li
             className={props.is_active ? "active": undefined}
             style={props.style}
-            onClick={props.onClick}
+            onClick={() => props.onClick?.()}
         >
             <Link to={`${props.item === "main" ? "" : props.item}`}>{props.item}</Link>
         </li>

@@ -2,7 +2,7 @@ import * as React from "react";
 
 export interface INavigableItemProps {
     is_active?:boolean;
-    onClick?:() => void;
+    onClick?:(active?:boolean) => void;
 }
 
 export function withNavigation<Props extends INavigableItemProps>(ItemComponent:React.ComponentType<Props>) {
@@ -16,8 +16,8 @@ export function withNavigation<Props extends INavigableItemProps>(ItemComponent:
         }, [props.is_active]);
 
         const onClick = () => {
-            setIsActive(true);
-            props.onClick?.();
+            setIsActive(!is_active);
+            props.onClick?.(!is_active);
         }
 
         return (

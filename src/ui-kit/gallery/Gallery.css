@@ -32,9 +32,8 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 25pt;
-    border: 2pt solid rgb(255, 255, 255);
-    filter: brightness(0.8);
-    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    filter: brightness(0.75);
+    transition: all 0.4s ease-in-out;
     transform: scale(1);
 }
 
@@ -72,4 +71,17 @@ img {
 
 .grid-wrapper .tall {
     grid-row: span 3;
+}
+
+.active-item {
+    border-radius: 25pt;
+    border: 3pt solid #ff356b;
+    box-shadow: 0 0 10pt rgba(213, 33, 57, 0.85);
+}
+
+.active-item:hover {
+    border-radius: 25pt;
+    border: 4pt solid #ff356b;
+    box-shadow: 0 0 10pt rgba(213, 33, 57, 0.85);
+    transition: border 0.1ms;
 }

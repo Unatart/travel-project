@@ -1,14 +1,17 @@
+.grid-title {
+    grid-area: title;
+}
+
 .title {
     color: whitesmoke;
-    grid-area: title;
     padding-top: 30vh;
 }
 
 .first-text {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .second-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
