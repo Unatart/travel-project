@@ -1,3 +1,3 @@
-### Simple project for choosing travel route.
+### Site for customazing travel path.
 
 **npm run start** to run project
