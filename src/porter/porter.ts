@@ -1,7 +1,5 @@
 
-interface IPorter<T> {
-    begin:number,
-    end:number,
+export interface IPorter<T> {
     getLoadedData:() => T[];
     loadData:(from:number, to:number) => Promise<void>;
 }
@@ -12,8 +10,6 @@ export function createPorter<T>(load:(from:number, to:number) => Promise<T[]>):I
     let end = 0;
 
     return {
-        begin,
-        end,
         getLoadedData: () => loaded_data,
         loadData: async (from, to) => {
             const data_chunk = await load(from, to);
@@ -26,8 +22,6 @@ export function createPorter<T>(load:(from:number, to:number) => Promise<T[]>):I
             if (to < begin) {
                 loaded_data = [ ...data_chunk, ...loaded_data ];
             }
-
-            console.log(loaded_data);
         }
     };
 }

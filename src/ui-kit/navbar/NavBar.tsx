@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./NavBar.css";
-import {BarElement} from "../BarElement/BarElement";
+import {BarElement} from "../bar_element/BarElement";
 import {withNavigation} from "../../navigation/withNavigation";
 import {useLocation} from "react-router-dom";
 
