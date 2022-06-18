@@ -6,12 +6,26 @@ const OFFSET = 100;
 export function RoadMap() {
     const roadmap_data = getRoadMapData();
     return (
-        <div className={"roadmap"}>
+        <div className={"roadmap"} key={"roadmap"}>
             {roadmap_data.map((item, index) => {
                 return (
                     <>
-                        <div className={"roadmap-item"} style={{top: OFFSET * index}}>{item}</div>
-                        {index < roadmap_data.length - 1 && <div className={"map-arrow rotate"} style={{top: index ? 2 * OFFSET * index : OFFSET / 2}}>{"⤵"}</div>}
+                        <div
+                            className={"roadmap-item"}
+                            style={{top: OFFSET * index}}
+                            key={`item-${index}`}
+                        >
+                            {item}
+                        </div>
+                        {index < roadmap_data.length - 1 &&
+                            <div
+                                className={"map-arrow rotate"}
+                                key={`arrow-${index}`}
+                                style={{top: index ? 2 * OFFSET * index : OFFSET / 2}}
+                            >
+                                {"⤵"}
+                            </div>
+                        }
                     </>
                 )
             })}

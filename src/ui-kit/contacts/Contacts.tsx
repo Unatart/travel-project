@@ -7,7 +7,7 @@ export function Contacts() {
     return (
         <div className={"contacts"}>
             <div className={"contact-text"}>Contact us anytime! We're ready to help 24/7</div>
-            {contacts.map((contact) => <div className={"contact"}>{contact}</div>)}
+            {contacts.map((contact, index) => <div className={"contact"} key={index}>{contact}</div>)}
         </div>
     )
 }

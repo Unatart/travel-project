@@ -1,0 +1,78 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.popup-background {
+    position: fixed;
+    z-index: 999; /** Popup must be above all **/
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 210vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: appear 0.5s ease-in;
+}
+
+.popup {
+    position: fixed;
+    z-index: 999; /** Popup must be above all **/
+    width: 80vw;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #ff35bf 0%, #ff3550 50%), #ff3550;
+    border: 1pt solid transparent;
+    box-shadow: 0 0 10pt rgba(213, 33, 57, 0.85);
+    border-radius: 25pt;
+    animation: appear 0.5s ease-in;
+}
+
+.close-button {
+    position: absolute;
+    color: whitesmoke;
+    top: 3%;
+    right: 3%;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.popup-header {
+    position: absolute;
+    color: whitesmoke;
+    top: 3%;
+    left: 3%;
+    font-size: 2.5rem;
+    width: 90%;
+    height: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.popup-submit-button {
+    position: absolute;
+    color: whitesmoke;
+    bottom: 3%;
+    left: 50%;
+    font-size: 1.7rem;
+    padding: 8pt 18pt;
+    transform: translate(-50%, -50%);
+    border-radius: 5pt;
+    border: 1pt solid rgba(245, 245, 245, 0.75);
+}
+
+.popup-text {
+    position: absolute;
+    color: whitesmoke;
+    top: 40%;
+    left: 5%;
+    width: 80%;
+    font-size: 1.5rem;
+}

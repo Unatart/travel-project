@@ -8,14 +8,14 @@ import {NavGalleryItem} from "../gallery_item/GalleryItem";
 
 interface IGalleryProps {
     porter:IPorter<ICity>;
-    setResultPointer:(pointer:boolean) => void;
+    updateActiveCities:(city:string, active:boolean) => void;
 }
 
 const LIMIT = 18;
 const THRESHOLD = 12;
 
-// TODO: add skeletons
-export const Gallery:React.FC<IGalleryProps> = ({ porter, setResultPointer }) => {
+
+export const Gallery:React.FC<IGalleryProps> = ({ porter, updateActiveCities }) => {
     const [active_count, setActiveCount] = React.useState(0);
 
     const [offset, setOffset] = React.useState(0);
@@ -57,24 +57,26 @@ export const Gallery:React.FC<IGalleryProps> = ({ porter, setResultPointer }) =>
         }
     }, []);
 
-    const onGalleryItemClick = (is_active?:boolean) => {
-        if (is_active === undefined) {
-            return;
-        }
-        if (is_active) {
-            setActiveCount(active_count + 1);
-            setResultPointer(true);
-        } else {
-            setActiveCount(active_count - 1);
-            if (active_count === 1) {
-                setResultPointer(false);
+    const onGalleryItemClick = (item:string) => {
+        return (is_active?:boolean) => {
+            if (is_active === undefined) {
+                return;
+            }
+            if (is_active) {
+                setActiveCount(active_count + 1);
+                updateActiveCities(item, true);
+            } else {
+                setActiveCount(active_count - 1);
+                if (active_count === 1) {
+                    updateActiveCities(item, false);
+                }
             }
         }
     }
 
     return (
         <div className={"grid-wrapper"}>
-            {data.map((item, index) => <NavGalleryItem item={item} index={index} onClick={onGalleryItemClick}/>)}
+            {data.map((item, index) => <NavGalleryItem item={item} index={index} onClick={onGalleryItemClick(item.name)} key={index}/>)}
         </div>
     )
 }
